@@ -14,3 +14,6 @@ map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Fixes disabled tabufline annoying <C-i> behavior
 del("n", "<TAB>")
+
+-- Fixes buffer close, another tabufline bug
+map("n", "<leader>x", "<CMD>bd<CR>")
