@@ -8,6 +8,8 @@ local del = vim.keymap.del
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+map("n", "gs", "<CMD>Telescope lsp_document_symbols<CR>", { desc = "File symbols" })
+map("n", "gS", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", { desc = "Workspace symbols" })
 map("n", "gy", vim.lsp.buf.type_definition, { desc = "Go to type definition" })
 
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
