@@ -19,3 +19,9 @@ del("n", "<TAB>")
 
 -- Fixes buffer close, another tabufline bug
 map("n", "<leader>x", "<CMD>bd<CR>")
+
+-- LSP
+map("n", "<leader>ls", "<CMD>LspRestart<CR>", { desc = "LSP Restart" })
+
+-- Removes <leader>rn, so <leader>r is faster
+del("n", "<leader>rn")
