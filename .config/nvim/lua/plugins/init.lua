@@ -19,6 +19,7 @@ return {
       ensure_installed = {
         "lua",
         "markdown",
+        "python",
         "rust",
         "vim",
         "vimdoc",
