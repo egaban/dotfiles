@@ -5,6 +5,12 @@ map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights" })
 map("n", "<leader>x", "<CMD>bd<CR>", { desc = "Close buffer" })
 map("i", "jk", "<Esc>")
 
+-- Buffer navigation
+map("n", "<C-h>", "<C-w>h", { desc = "Buffer to the left", noremap = true, silent = true })
+map("n", "<C-j>", "<C-w>j", { desc = "Buffer below", noremap = true, silent = true })
+map("n", "<C-k>", "<C-w>k", { desc = "Buffer above", noremap = true, silent = true })
+map("n", "<C-l>", "<C-w>l", { desc = "Buffer to the right", noremap = true, silent = true })
+
 -- Telescope
 local builtin = require("telescope.builtin")
 map("n", "<leader>f", builtin.find_files, { desc = "Find files" })
