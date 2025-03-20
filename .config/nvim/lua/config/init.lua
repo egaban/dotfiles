@@ -10,3 +10,5 @@ vim.opt.smarttab = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.wo.number = true
+
+vim.go.ignorecase = true
