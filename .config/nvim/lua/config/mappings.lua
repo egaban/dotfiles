@@ -16,6 +16,7 @@ local builtin = require("telescope.builtin")
 map("n", "<leader>f", builtin.find_files, { desc = "Find files" })
 map("n", "gs", builtin.lsp_document_symbols, { desc = "Find symbols" })
 map("n", "gS", builtin.lsp_workspace_symbols, { desc = "Workspace symbols" })
+map("n", "g/", builtin.live_grep, { desc = "Live grep" })
 
 -- LSP
 map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
