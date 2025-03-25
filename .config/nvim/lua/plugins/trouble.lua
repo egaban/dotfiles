@@ -5,7 +5,7 @@ return {
 	event = "BufEnter",
 	keys = {
 		{
-			"<leader>ld",
+			"ld",
 			"<cmd>Trouble diagnostics toggle<cr>",
 			desc = "Diagnostics (Trouble)",
 		},

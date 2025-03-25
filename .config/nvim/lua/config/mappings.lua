@@ -5,6 +5,10 @@ map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights" })
 map("n", "<leader>x", "<CMD>bd<CR>", { desc = "Close buffer" })
 map("i", "jk", "<Esc>")
 
+-- Navigation
+map({ "n", "v" }, "gh", "0", { desc = "Go to line start", noremap = true })
+map({ "n", "v" }, "gl", "$", { desc = "Go to line end", noremap = true })
+
 -- Buffer navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Buffer to the left", noremap = true, silent = true })
 map("n", "<C-j>", "<C-w>j", { desc = "Buffer below", noremap = true, silent = true })
@@ -18,7 +22,8 @@ map("n", "gs", builtin.lsp_document_symbols, { desc = "Find symbols" })
 map("n", "gS", builtin.lsp_workspace_symbols, { desc = "Workspace symbols" })
 map("n", "g/", builtin.live_grep, { desc = "Live grep" })
 
--- LSP
+-- LSP (inspired by zed)
+map("n", "gA", vim.lsp.buf.references, { desc = "All references" })
 map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 map("n", "cd", vim.lsp.buf.rename, { desc = "Rename" })
 map("n", "gy", vim.lsp.buf.type_definition, { desc = "Go to symbol definition" })
