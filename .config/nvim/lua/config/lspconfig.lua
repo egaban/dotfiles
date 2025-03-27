@@ -2,8 +2,9 @@ local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers = {
-	"rust_analyzer",
+	"lua_ls",
 	"pyright",
+	"rust_analyzer",
 }
 
 for _, server in ipairs(servers) do
