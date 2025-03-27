@@ -2,7 +2,7 @@ local map = vim.keymap.set
 
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights" })
-map("t", "<Esc>", "<C-\\><C-n>", { desc = "Escape terminal mode" })
+map("t", "<ESC>", "<C-\\><C-n>", { desc = "Escape terminal mode" })
 map("n", "<leader>x", "<CMD>bd<CR>", { desc = "Close buffer" })
 map("i", "jk", "<Esc>")
 

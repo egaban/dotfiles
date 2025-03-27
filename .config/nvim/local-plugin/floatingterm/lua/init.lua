@@ -5,6 +5,10 @@ local state = {
 	win = -1,
 }
 
+local function hide_terminal()
+	vim.api.nvim_win_hide(state.win)
+end
+
 local function create_floating_terminal()
 	local width = math.floor(vim.o.columns * 0.8)
 	local height = math.floor(vim.o.lines * 0.5)
@@ -27,16 +31,18 @@ local function create_floating_terminal()
 		style = "minimal",
 		border = "rounded", -- Optional: add a rounded border
 	})
+
+	if vim.bo[state.buf].buftype ~= "terminal" then
+		vim.cmd.term()
+		vim.keymap.set("n", "<ESC>", hide_terminal, { buffer = state.buf })
+	end
 end
 
 local function toggle_terminal()
 	if not vim.api.nvim_win_is_valid(state.win) then
 		create_floating_terminal()
-		if vim.bo[state.buf].buftype ~= "terminal" then
-			vim.cmd.term()
-		end
 	else
-		vim.api.nvim_win_hide(state.win)
+		hide_terminal()
 	end
 end
 
