@@ -1,7 +1,6 @@
 return {
-	"neovim/nvim-lspconfig",
-	-- lazy = false,
-	config = function()
-		require("config.lspconfig")
-	end,
+  "neovim/nvim-lspconfig",
+  config = function()
+    require "configs.lspconfig"
+  end,
 }

@@ -1,6 +1,0 @@
-{
-  "inline math": {
-    "prefix": "im",
-    "body": "\\($1\\)"
-  }
-}
