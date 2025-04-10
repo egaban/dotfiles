@@ -1,0 +1,20 @@
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+formatter = {command = "bash", args = ["-c", "isort - | black -"]}
+auto-format = true
+
+[[language]]
+name = "latex"
+formatter = { command = "latexindent"}
+auto-format = true
+
+[[language]]
+name = "c"
+formatter = { command = "clang-format" }
+auto-format = true
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
